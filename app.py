@@ -81,9 +81,9 @@ def blink_wb():
   while True:
     time.sleep(0.1)
     while blink_flag == True:
-      mqtt_client_wirenboard.publish("/devices/wb-mr6c_20/controls/K1/on", "1")
-      time.sleep(0.5)
       mqtt_client_wirenboard.publish("/devices/wb-mr6c_20/controls/K1/on", "0")
+      time.sleep(0.5)
+      mqtt_client_wirenboard.publish("/devices/wb-mr6c_20/controls/K1/on", "1")
       time.sleep(0.5)
 
 
